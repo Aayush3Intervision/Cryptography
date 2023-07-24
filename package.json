@@ -1,0 +1,77 @@
+{
+  "name": "redspycontracttransaction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@safe-global/safe-ethers-lib": "^1.9.0",
+    "@safe-global/safe-web3-lib": "^1.9.0",
+    "@types/chai": "^4.3.4",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.18",
+    "@types/yargs": "^16.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "hardhat": "^2.12.6",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.3",
+    "sinon": "^14.0.0",
+    "sinon-chai": "^3.7.0",
+    "ts-generator": "^0.1.1",
+    "typescript": "^4.9.4",
+    "yargs": "^17.6.2"
+  },
+  "dependencies": {
+    "@ethersproject/abstract-signer": "^5.7.0",
+    "@gnosis.pm/mock-contract": "^4.0.0",
+    "@gnosis.pm/safe-web3-lib": "^1.7.1",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@openzeppelin/contracts": "^4.8.2",
+    "@safe-global/safe-core-sdk": "^3.3.1",
+    "@safe-global/safe-core-sdk-types": "^1.9.0",
+    "@safe-global/safe-ethers-adapters": "^0.1.0-alpha.16",
+    "@safe-global/safe-service-client": "^1.5.1",
+    "@web-std/file": "^3.0.2",
+    "ascii85": "^1.0.2",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "ipfs-core": "^0.18.1",
+    "ipfs-http-client": "^60.0.1",
+    "jimp": "^0.22.8",
+    "js-base64": "^3.7.5",
+    "node-fetch": "^2.6.6",
+    "web3": "^1.10.0"
+  },
+  "lint-staged": {
+    "src/**/!(*test).ts": [
+      "yarn lint",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
